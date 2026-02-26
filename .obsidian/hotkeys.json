@@ -1,0 +1,16 @@
+{
+  "switcher:open": [],
+  "obsidian-completr:completr-bypass-enter-key": [],
+  "workspace:next-tab": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "PageDown"
+    }
+  ],
+  "obsidian-completr:completr-fake-enter": [],
+  "obsidian-completr:completr-fake-arrow-up": [],
+  "obsidian-completr:completr-fake-arrow-down": [],
+  "obsidian-completr:completr-insert-selected-suggestion": []
+}

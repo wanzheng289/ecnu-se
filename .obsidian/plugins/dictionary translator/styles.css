@@ -1,0 +1,105 @@
+/*
+
+This CSS file will be included with your plugin, and
+available in the app when your plugin is enabled.
+
+If your plugin does not need CSS, delete this file.
+
+*/
+
+
+.settings-hide {
+	display: none;
+}
+
+.setting-engine-header {
+	display: flex;
+	justify-content: space-between;
+	height: 30px;
+}
+
+.setting-engine-header img {
+	transform: scale(0.8);
+}
+
+.setting-engine-header .guide {
+	font-weight: bolder;
+	font-size: 15px;
+	line-height: 30px;
+}
+
+.setting-title {
+	font-weight: bolder;
+	font-size: 15px;
+	line-height: 30px;
+	height: 40px;
+	border-top: 1px gainsboro solid;
+	padding-top: 10px;
+}
+
+.setting-title + .setting-item {
+	border-top: none;
+}
+
+.setting-config-box {
+	border-top: 1px gainsboro solid;
+	padding-top: 10px;
+}
+
+.translate-card-header {
+	font-size: 20px;
+}
+
+.translate-card-header button {
+	border: none;
+}
+
+.translate-card-header button:hover {
+	border: none;
+}
+
+.translate-card-header .arrows {
+	font-weight: bolder;
+}
+
+.translate-card-header .source-link {
+	text-decoration: none;
+}
+
+.translate-card-header .source-link:hover {
+	color: #2080f0;
+	text-decoration: none;
+}
+
+.translate-card-button {
+	margin-top: 10px;
+}
+
+.translate-card-link {
+	width: 100%;
+	height: 300px;
+}
+
+.translate-card .record-button {
+	margin-left: 5px;
+}
+
+.translate-card .explain-card {
+	padding: 3px;
+}
+
+.translate-card .explain-card:hover {
+	background-color: rgba(245, 245, 245, 0.69);
+}
+
+.translate-card button:not(.clickable-icon) {
+	background-color: transparent;
+	box-shadow: none;
+}
+
+.callout[data-callout="translator-card-callout"] {
+	--callout-icon: book-open-text;
+}
+.callout[data-callout="translator-card-callout"] .callout-icon{
+	vertical-align: bottom;
+}

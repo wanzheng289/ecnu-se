@@ -1,0 +1,28 @@
+{
+    "manifest": {
+        "translationVersion": 1765854702313,
+        "pluginVersion": "0.3.20"
+    },
+    "description": {
+        "original": "Easily see and access any plugin's settings or hotkey assignments (and conflicts) from the Community Plugins tab",
+        "translation": "Easily see and access any plugin's settings or hotkey assignments (and conflicts) from the Community Plugins tab"
+    },
+    "dict": {
+        "Notice(`No settings tab for \"${t}\": it may not be installed or might not have settings.`)": "Notice(`No settings tab for \"${t}\": it may not be installed or might not have settings.`)",
+        ".error(h)": ".error(h)",
+        "name:\"Open the Community Plugins settings\"": "name:\"Open the Community Plugins settings\"",
+        "name:\"Browse or search the Community Plugins catalog\"": "name:\"Browse or search the Community Plugins catalog\"",
+        "name:\"Open settings for plugin...\"": "name:\"Open settings for plugin...\"",
+        "name:\"Open hotkeys for plugin...\"": "name:\"Open hotkeys for plugin...\"",
+        "name:\"App\"": "name:\"App\"",
+        "text:\"to configure hotkey(s)\"": "text:\"to configure hotkey(s)\"",
+        ".setName(\"App\")": ".setName(\"App\")",
+        ".setDesc(\"Miscellaneous application commands (always enabled)\")": ".setDesc(\"Miscellaneous application commands (always enabled)\")",
+        ".setDesc(\"Core editing commands (always enabled)\")": ".setDesc(\"Core editing commands (always enabled)\")",
+        ".setDesc(\"Core file and pane management commands (always enabled)\")": ".setDesc(\"Core file and pane management commands (always enabled)\")",
+        ".setPlaceholder(\"Filter plugins...\")": ".setPlaceholder(\"Filter plugins...\")",
+        ".setTooltip(\"Options\")": ".setTooltip(\"Options\")",
+        ".setTooltip(`Configure hotkeys\n(${u.length}/${this.commandsByPlugin[e].length} assigned${a?\"; \"+a+\" conflicting\":\"\"})`)": ".setTooltip(`Configure hotkeys\n(${u.length}/${this.commandsByPlugin[e].length} assigned${a?\"; \"+a+\" conflicting\":\"\"})`)",
+        ".appendText(\" \")": ".appendText(\" \")"
+    }
+}

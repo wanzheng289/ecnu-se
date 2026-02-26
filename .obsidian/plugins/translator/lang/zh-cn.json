@@ -1,0 +1,38 @@
+{
+    "manifest": {
+        "translationVersion": 1765854709724,
+        "pluginVersion": "0.4.1"
+    },
+    "description": {
+        "original": "This is a plugin for Obsidian to translate selected text.",
+        "translation": "This is a plugin for Obsidian to translate selected text."
+    },
+    "dict": {
+        "Notice(msg)": "Notice(msg)",
+        "name : \"/\"": "name : \"/\"",
+        "name: \"Enable\"": "name: \"Enable\"",
+        "name: \"AppId\"": "name: \"AppId\"",
+        "name: \"SecretKey\"": "name: \"SecretKey\"",
+        "name: \"From\"": "name: \"From\"",
+        "name: \"To\"": "name: \"To\"",
+        "name: \"Audio\"": "name: \"Audio\"",
+        "name: \"Location\"": "name: \"Location\"",
+        "name: \"translate\"": "name: \"translate\"",
+        "text: \"Before using this plugin, you need browse to \"": "text: \"Before using this plugin, you need browse to \"",
+        "text: \"https://ai.youdao.com/#/\"": "text: \"https://ai.youdao.com/#/\"",
+        "text: \"to register first!\"": "text: \"to register first!\"",
+        "text: \"For more infomation on using it, refer to \"": "text: \"For more infomation on using it, refer to \"",
+        "text: \"https://docs.microsoft.com/zh-cn/azure/cognitive-services/translator/quickstart-translator\"": "text: \"https://docs.microsoft.com/zh-cn/azure/cognitive-services/translator/quickstart-translator\"",
+        "text: \".\"": "text: \".\"",
+        "text: \"http://api.fanyi.baidu.com/\"": "text: \"http://api.fanyi.baidu.com/\"",
+        "text: \"Translator Settings\"": "text: \"Translator Settings\"",
+        "text: \"No results!\"": "text: \"No results!\"",
+        "text: \"Translating...\"": "text: \"Translating...\"",
+        "text: \"Word forms\"": "text: \"Word forms\"",
+        "text: \"Other translations\"": "text: \"Other translations\"",
+        "text: `${item.key}: ${item.value.toString()}`": "text: `${item.key}: ${item.value.toString()}`",
+        "text: \"Translator\"": "text: \"Translator\"",
+        ".setName(`${key}:`)": ".setName(`${key}:`)",
+        ".setPlaceholder(\"To be translated\")": ".setPlaceholder(\"To be translated\")"
+    }
+}

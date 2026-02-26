@@ -1,0 +1,228 @@
+# 2
+- 宏内核&微内核
+# 3 进程
+- 内存空间[[summary-before-final-exam.pdf#page=19&selection=10,0,10,28|summary-before-final-exam, p.19]]
+	- stack
+	- heap
+	- data
+	- text
+- 进程&程序
+- 进程的状态&转换[[summary-before-final-exam.pdf#page=21&selection=10,0,10,24|summary-before-final-exam, p.21]]
+- PCB：进程控制块
+	- 组成：程序计数器、寄存器、...
+- 进程&线程
+- 进程调度
+	- 调度队列：ready队列&wait队列
+	- 切换：[[summary-before-final-exam.pdf#page=25&selection=10,0,10,36|summary-before-final-exam, p.25]]
+- 上下文切换：保存$P_1$的状态到PCB，切换到$P_2$
+- 操作
+	- 创建进程
+		- 进程树
+		- pid
+		- 指令：`fork()` `exec()`
+	- 终止进程
+		- `exit()`
+		- 僵尸进程：没有父进程等待该子进程结束
+- 多进程架构-谷歌浏览器
+- IPC：进程间通信
+	- 共享内存
+	- 消息传递
+		- `send()` `receive()`
+		- 实现：管道
+			- 全双工/半双工
+			- 匿名管道：只存在于父进程和子进程之间
+			- 命名管道
+	- 生产者-消费者问题
+- 套接字
+- RPC：远程过程调用
+# 4 线程&并发
+- 单线程进程&多线程进程
+- 优点
+- 进程&线程
+- 并发&并行
+	- 并发：逻辑层面的同时推进
+	- 并行：物理层面的同时运行
+		- 数据并行：每个任务独立访问一个数据块
+		- 任务并行：可能同时访问数据
+- amdahl's law-$speedup \leq \frac{1}{S+\frac{1-S}{N}}$
+- 用户线程&内核线程
+	- 对应：多对一/一对一/多对多
+- 线程库
+	- Pthreads
+		- `pthread_create()`
+		- `pthread_join()`
+- 隐式线程
+	- 线程池
+	- Fork-Join 
+	- OpenMP：`#pragma omp parallel`-并行执行
+- 问题
+	- `fork()` `exec()`
+	- signal handler
+	- TLS：线程本地存储（每个线程独有）
+# 5 CPU调度
+- 基本概念
+	- CPU突发
+	- I/O突发：等待I/O
+- CPU调度
+	- 非抢占式：直到主动让出
+	- 抢占式：剥夺CPU
+		- running→ready 
+		- waiting→ready 
+- 调度指标
+	- CPU利用
+	- 吞吐量
+	- <span style="background:rgba(240, 200, 0, 0.2)">周转时间</span>
+	- <span style="background:rgba(240, 200, 0, 0.2)">等待时间</span>
+	- 响应时间
+- 调度算法
+	- FCFS：先来先服务
+		- 护航效应：短进程在长进程之后
+	- SJF：最短作业优先【最优】
+		- 抢占版：SRT-最短剩余时间
+	- RR：时间片轮转
+	- 评估方式
+		- 分析
+		- 队列模型
+		- $Little's formula:n=\lambda * W$
+			- n：平均队列长度
+			- W：平均等待时间
+			- $\lambda$：平均到达速率
+		- 仿真
+- 优先级调度
+	- 抢占式/非抢占式
+	- 问题：饥饿-低优先级的进程可能永远不会执行
+	- 解决：老化-进程的优先级随时间增加
+- 多级队列
+- 多核进程
+	- 内存停顿
+- 多线程多核系统
+# 6 同步
+- 竞争条件
+- 临界区问题
+- peterson算法
+	- `int turn`-资源轮到某个进程
+	- `boolean flag[2]`-进程进入临界区的意愿
+	- 问题：语句可能颠倒
+- 硬件支持【原子的】
+	- test and set [[summary-before-final-exam.pdf#page=109&selection=10,0,10,28|summary-before-final-exam, p.109]]
+	- compare and swap[[summary-before-final-exam.pdf#page=110&selection=10,0,14,11|summary-before-final-exam, p.110]]
+- 原子变量
+	- `sequence`
+	- `increment()`
+- 互斥锁
+	- `acquire()`
+	- `release()`
+- 信号量
+	- `wait()`/`P()`
+	- `signal()`/`V()`
+	- 计数信号量/二进制信号量
+	- 应用：CS问题
+	- 应用
+		- 忙等待实现
+		- 非忙等待实现
+- 管程
+- 条件变量
+# 7 同步案例
+- 生产者-消费者
+	- `mutex=1`
+	- `full=0`
+	- `empty=n`
+- 读者-写者
+	- `rw_mutex=1`
+	- `mutex=1`
+	- `int read_count=0`
+- 哲学家就餐问题
+	- 算法：[[summary-before-final-exam.pdf#page=132&selection=10,0,10,39|summary-before-final-exam, p.132]]
+# 8 死锁
+- 必要条件
+	- 互斥
+	- 占有并等待
+	- 非抢占
+	- 循环等待
+- 资源分配图
+	- 需求边
+	- 分配边
+	- 结论：单实例+环=死锁
+- 解决方式
+	- 死锁预防：进程开始运行前
+		- 破坏四个必要条件之一
+	- 死锁避免：即将发生死锁前
+		- 安全状态
+		- 单实例：资源分配图
+		- 多实例：<span style="background:rgba(240, 200, 0, 0.2)">银行家算法</span>
+			- 安全算法
+			- 资源分配算法
+				- e.g.求出安全队列/判断是否应满足请求
+	- 检测+破环死锁
+		- 单实例：等待图
+		- 多实例：检测算法
+# 9 主存
+- 逻辑地址空间&物理地址空间
+	- 逻辑地址
+	- 物理地址
+	- 逻辑地址空间
+	- 物理地址空间
+- MMU 
+- 分配方式
+	- 连续分配
+		- 问题：孔→外部碎片
+		- 硬件支持：limit、relocation寄存器
+	- 分页
+		- 页表寻址：页号p，页偏移d
+			- 二进制
+			- 十进制
+		- 硬件
+		- 页帧-物理；页-内存
+		- 页表实现：PTBR；PTLR 
+			- TLB：加速页表
+		- 评价指标：EAT 
+- 内存保护：有效-无效位
+- 共享页
+- 页表
+	- 层次
+	- 哈希
+	- 逆向
+- 交换
+	- 换入换出
+	- 上下文切换
+# 10 <span style="background:rgba(240, 200, 0, 0.2)">虚拟内存</span>
+- 有效无效位
+- 处理缺页错误步骤[[summary-before-final-exam.pdf#page=194&selection=10,0,10,28|summary-before-final-exam, p.194]]
+- COW：写时复制
+- 页置换算法
+	- FIFO 
+		- Belady异常：页帧数上升，缺页错误数量上升
+	- 最优算法（Optimal）：预知
+	- LRU：最近最少使用
+		- 近似算法/二次机会/加强二次机会
+- 页分配算法
+	- 固定分配
+	- 加权分配
+	- 问题：抖动
+	- 解决
+		- 工作集模型$\Delta$
+		- PFF算法
+# 11 大容量存储
+- 硬盘性能
+	- 寻道时间
+	- 旋转时间
+	- 传输时间
+- HDD算法
+	- FCFS 
+	- SCAN 
+	- C-SCAN
+- 错误检测和纠正：检验和、CRC、ECC 
+- RAID结构-通过冗余增加备份
+# 12 I/O系统
+- I/O硬件
+	- 4个寄存器
+	- MMIO 
+- 等待I/O设备返回结果
+	- 轮询
+	- 中断【主要】
+- DMA：直接内存访问
+# 13 文件系统
+- 操作
+- 顺序访问/直接访问
+- 目录：一级（不允许重名）/两级/树状（允许重名）/无环图（软连接）
+- 保护：rwx 

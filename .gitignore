@@ -1,0 +1,12 @@
+# Obsidian
+.obsidian/cache/
+.obsidian/workspace*
+.trash/
+
+# Large files / attachments
+*.pdf
+*.mp4
+*.zip
+*.rar
+*.7z
+

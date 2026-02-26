@@ -1,0 +1,18 @@
+{
+    "manifest": {
+        "translationVersion": 1765854671069,
+        "pluginVersion": "1.7.0"
+    },
+    "description": {
+        "original": "Merge a folder of notes for easier export.",
+        "translation": "Merge a folder of notes for easier export."
+    },
+    "dict": {
+        ".log(`Found a file: ${r.name}`)": ".log(`Found a file: ${r.name}`)",
+        ".log(`Found a folder: ${r.name}`)": ".log(`Found a folder: ${r.name}`)",
+        ".log(\"Loaded settings\",t)": ".log(\"Loaded settings\",t)",
+        ".log(\"Saving settings\",this.settings)": ".log(\"Saving settings\",this.settings)",
+        "text:`${I} - ${this.plugin.translation.get().Settings}`": "text:`${I} - ${this.plugin.translation.get().Settings}`",
+        "text:`${this.tranlation.get().OverwriteFileQuestion} \"${this.existingFileName}\"?`": "text:`${this.tranlation.get().OverwriteFileQuestion} \"${this.existingFileName}\"?`"
+    }
+}

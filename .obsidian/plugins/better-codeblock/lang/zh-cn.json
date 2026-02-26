@@ -1,0 +1,26 @@
+{
+    "manifest": {
+        "translationVersion": 1765854673775,
+        "pluginVersion": "1.0.8"
+    },
+    "description": {
+        "original": "Add title, line number to Obsidian code block",
+        "translation": "Add title, line number to Obsidian code block"
+    },
+    "dict": {
+        ".log(\"Loading Better Code Block Plugin\")": ".log(\"Loading Better Code Block Plugin\")",
+        ".log(\"Unloading Better Code Block Plugin\")": ".log(\"Unloading Better Code Block Plugin\")",
+        ".setName(\"Exclude language list\")": ".setName(\"Exclude language list\")",
+        ".setName(\"Font color of title\")": ".setName(\"Font color of title\")",
+        ".setName(\"Background color of title\")": ".setName(\"Background color of title\")",
+        ".setName(\"HighLight Color\")": ".setName(\"HighLight Color\")",
+        ".setName(\"Show line number\")": ".setName(\"Show line number\")",
+        ".setName(\"Show dividing line\")": ".setName(\"Show dividing line\")",
+        ".setName(\"Show language name in the top right\")": ".setName(\"Show language name in the top right\")",
+        ".setDesc(\"Title and line numbers do not apply in these languages, separate by `,`\")": ".setDesc(\"Title and line numbers do not apply in these languages, separate by `,`\")",
+        ".setPlaceholder(\"like todoist,other,...\")": ".setPlaceholder(\"like todoist,other,...\")",
+        ".setPlaceholder(\"Enter a color\")": ".setPlaceholder(\"Enter a color\")",
+        ".setPlaceholder(\"#00000020\")": ".setPlaceholder(\"#00000020\")",
+        ".setPlaceholder(\"#2d82cc20\")": ".setPlaceholder(\"#2d82cc20\")"
+    }
+}
